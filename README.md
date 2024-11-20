@@ -1,5 +1,6 @@
 Image Captioing App
-Description
+
+Description:
 This app generates cation of uploaded image in english along with other languages (listed in the dropdown box)
 
 Prerequisites
@@ -10,7 +11,7 @@ pip (Python package manager)
 Installation Steps
 
 1. Clone the Repository
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/Soni04/MiniProject2.git
 cd your-repository
 
 2. Create a Virtual Environment
