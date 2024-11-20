@@ -3,9 +3,10 @@ Image Captioing App
 Description:
 This app generates cation of uploaded image in english along with other languages (listed in the dropdown box)
 
-Prerequisites
+Prerequisites:
+
 Make sure you have the following installed on your system:
-Python 3.x
+Python 3.x, 
 pip (Python package manager)
 
 Installation Steps
