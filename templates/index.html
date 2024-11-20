@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Captioning App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Captioning & Translation</h1>
+        <form action="/process" method="POST" enctype="multipart/form-data">
+            <label for="image">Upload an Image:</label>
+            <input type="file" name="image" id="image" required>
+            
+            <label for="language">Select Language:</label>
+            <select name="language" id="language">
+                <option value="hin">Hindi</option>
+                <option value="ben">Bengali</option>
+                <option value="guj">Gujarati</option>
+                <option value="kan">Kannada</option>
+                <option value="mal">Malayalam</option>
+                <option value="mar">Marathi</option>
+                <option value="tam">Tamil</option>
+                <option value="tel">Telugu</option>
+                <option value="urd">Urdu</option>
+            </select>
+            
+            <button type="submit">Generate Caption</button>
+        </form>
+        {% if image_url and caption and translated_caption %}
+            <div class="result">
+                <h2>Uploaded Image:</h2>
+                <img src="{{ image_url }}" alt="Uploaded Image" style="max-width: 100%; height: auto;">
+                <h2>Generated Caption:</h2>
+                <p>{{ caption }}</p>
+                <h2>Translated Caption:</h2>
+                <p>{{ translated_caption }}</p>
+                <h2>Audio Description:</h2>
+                <audio controls>
+                    <source src="{{ audio_file }}" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+        {% endif %}
+    </div>
+    <footer>
+        <p>Image Captioning App © 2024</p>
+    </footer>
+</body>
+</html>

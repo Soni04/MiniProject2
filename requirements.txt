@@ -1,0 +1,11 @@
+flask
+transformers
+gtts
+pillow
+gunicorn
+torchvision
+torchaudio
+torch
+gtts
+pillow
+sentencepiece
